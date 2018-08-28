@@ -1,0 +1,11 @@
+<h1>Manage Link</h1>
+<p>Original link url: <%=@link.url%></p>
+<p>Shortened link url: <%=link_url(@link)%></p>
+<p>Link management url: <%=edit_link_url(@link)%><p>
+<p>Number of uses: <%=@link.uses%></p>
+
+
+
+<%= render 'delete_form', link: @link %>
+
+<%= link_to 'Back', new_link_path %>
